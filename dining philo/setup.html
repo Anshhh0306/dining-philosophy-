@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 01 · Dining Philosophers Setup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="slide-page">
+    <header class="slide-header">
+        <nav class="slide-nav">
+            <a class="brand-link" href="index.html">Dining Philosophers</a>
+            <div class="nav-links">
+                <a class="nav-btn" href="deadlock.html">Next ▸</a>
+            </div>
+        </nav>
+        <div class="slide-hero">
+            <p class="eyebrow">Problem definition</p>
+            <h1>The Dining Philosophers Setup</h1>
+            <p>Five philosophers sit at a circular table, each requiring two adjacent forks to eat. This scenario models concurrent processes competing for shared resources in operating systems.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="feature-grid">
+            <article class="feature-card">
+                <h3>Philosophers ≈ Threads</h3>
+                <p>Each philosopher alternates between thinking and eating. They represent concurrent threads competing for shared resources.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Forks ≈ Shared Resources</h3>
+                <p>Five forks are arranged between philosophers. Only one philosopher can hold a fork at a time, mirroring mutual exclusion in OS primitives.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Simple Operating Rules</h3>
+                <p>To eat, a philosopher must pick up both adjacent forks. After eating, both forks are released. These constraints create the possibility of conflicts.</p>
+            </article>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-header">
+                <p class="eyebrow">Analogy in practice</p>
+                <h2>Why operating systems teach this problem.</h2>
+                <p>The dining table captures the essence of resource allocation. When threads share locks, devices, or buffers, they must coordinate to keep the system responsive.</p>
+            </div>
+            <div class="takeaways-grid">
+                <div class="takeaway">
+                    <h3>Shared devices</h3>
+                    <p>Think of storage buses, printers, or network sockets that only accept one request at a time.</p>
+                </div>
+                <div class="takeaway">
+                    <h3>Critical sections</h3>
+                    <p>Code that manipulates shared state requires locking so that operations remain atomic.</p>
+                </div>
+                <div class="takeaway">
+                    <h3>Potential contention</h3>
+                    <p>When everyone needs the same pair of resources simultaneously, the system must steer them to avoid stalling.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="slide-footer">
+        <a class="btn ghost" href="index.html">◂ Back to overview</a>
+        <a class="btn primary" href="deadlock.html">Next: Deadlock moment</a>
+    </footer>
+    <div style="text-align: center; padding: 20px; color: rgba(230, 245, 255, 0.7); font-size: 0.9rem;">
+        <p>Made by <strong>Anshumaan Das</strong> - RA2411056010283 and <strong>Ankit Kumar</strong> - RA2411056010259</p>
+    </div>
+</body>
+</html>

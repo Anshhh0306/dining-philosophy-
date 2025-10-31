@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 02 · Deadlock Explained</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="slide-page">
+    <header class="slide-header">
+        <nav class="slide-nav">
+            <a class="brand-link" href="index.html">Dining Philosophers</a>
+            <div class="nav-links">
+                <a class="nav-btn" href="setup.html">◂ Prev</a>
+                <a class="nav-btn" href="interactive.html">Next ▸</a>
+            </div>
+        </nav>
+        <div class="slide-hero">
+            <p class="eyebrow">Deadlock conditions</p>
+            <h1>Understanding circular wait and system deadlock</h1>
+            <p>Demonstration of the four Coffman conditions in action: when every philosopher acquires one fork and waits for another, the system enters deadlock.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="deadlock-diagram">
+            <div class="table-visual mini" aria-hidden="true">
+                <div class="table-surface">
+                    <div class="philosopher blocked" data-label="A"></div>
+                    <div class="philosopher blocked" data-label="B"></div>
+                    <div class="philosopher blocked" data-label="C"></div>
+                    <div class="philosopher blocked" data-label="D"></div>
+                    <div class="philosopher blocked" data-label="E"></div>
+                    <div class="fork busy"></div>
+                    <div class="fork busy"></div>
+                    <div class="fork busy"></div>
+                    <div class="fork busy"></div>
+                    <div class="fork busy"></div>
+                </div>
+                <div class="deadlock-glow"></div>
+            </div>
+            <ul class="deadlock-facts">
+                <li><span>Mutual exclusion</span> Only one philosopher can hold a fork at any moment.</li>
+                <li><span>Hold &amp; wait</span> Each philosopher clutches one fork while waiting for the next.</li>
+                <li><span>No preemption</span> Forks cannot be forcibly reclaimed; releases must be voluntary.</li>
+                <li><span>Circular wait</span> Everyone waits for the fork to their right, forming a closed loop.</li>
+            </ul>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-header">
+                <p class="eyebrow">Why it matters</p>
+                <h2>Deadlock is costly in modern systems.</h2>
+                <p>Threads stuck in circular waits hog CPU time, devices, and locks. Operating systems must detect, avoid, or prevent these conditions to keep applications responsive.</p>
+            </div>
+            <div class="takeaways-grid">
+                <div class="takeaway">
+                    <h3>Resource hogging</h3>
+                    <p>Stalled threads still own resources, starving others that could make progress.</p>
+                </div>
+                <div class="takeaway">
+                    <h3>Detection overhead</h3>
+                    <p>Cycle detection in wait-for graphs consumes time; prevention is often cheaper.</p>
+                </div>
+                <div class="takeaway">
+                    <h3>User impact</h3>
+                    <p>From frozen UIs to stalled servers, deadlocks manifest as critical system reliability and performance issues.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="slide-footer">
+        <a class="btn ghost" href="setup.html">◂ Back: Setup</a>
+        <a class="btn primary" href="interactive.html">Next: Interactive timeline</a>
+    </footer>
+    <div style="text-align: center; padding: 20px; color: rgba(230, 245, 255, 0.7); font-size: 0.9rem;">
+        <p>Made by <strong>Anshumaan Das</strong> - RA2411056010283 and <strong>Ankit Kumar</strong> - RA2411056010259</p>
+    </div>
+</body>
+</html>

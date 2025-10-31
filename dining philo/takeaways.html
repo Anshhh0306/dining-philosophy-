@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 05 · Key Takeaways</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="slide-page">
+    <header class="slide-header">
+        <nav class="slide-nav">
+            <a class="brand-link" href="index.html">Dining Philosophers</a>
+            <div class="nav-links">
+                <a class="nav-btn" href="solutions.html">◂ Prev</a>
+                <a class="nav-btn" href="interactive.html">Replay simulation</a>
+            </div>
+        </nav>
+        <div class="slide-hero">
+            <p class="eyebrow">Summary</p>
+            <h1>Applications in operating systems design</h1>
+            <p>Key principles derived from the Dining Philosophers Problem and their implementation in modern operating system resource management and scheduling.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="takeaways-grid">
+            <div class="takeaway">
+                <h3>Map resources correctly</h3>
+                <p>Identify which mutexes, devices, or buffers behave like forks so you know where contention might appear.</p>
+            </div>
+            <div class="takeaway">
+                <h3>Break a Coffman condition</h3>
+                <p>Eliminate circular wait, hold-and-wait, or no-preemption to keep systems from freezing.</p>
+            </div>
+            <div class="takeaway">
+                <h3>Plan for fairness</h3>
+                <p>After preventing deadlock, ensure starvation does not occur by rotating priority or using fair queues.</p>
+            </div>
+            <div class="takeaway">
+                <h3>Relate to real OS services</h3>
+                <p>Discuss scheduling, database locks, and driver queues to show how the metaphor scales beyond the dinner table.</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-header">
+                <p class="eyebrow">Further exploration</p>
+                <h2>Extensions and variations</h2>
+                <p>This problem can be extended with additional philosophers, varied resource counts, or alternative starvation-avoidance policies for deeper analysis.</p>
+            </div>
+            <div class="slide-grid">
+                <a class="slide-card" href="interactive.html">
+                    <h3>Interactive simulation</h3>
+                    <p>Explore the interactive timeline to visualize different scenarios and policy implementations.</p>
+                    <span class="cta">Open simulation</span>
+                </a>
+                <a class="slide-card" href="index.html">
+                    <h3>Overview</h3>
+                    <p>Navigate to any section for a comprehensive review of concepts and implementations.</p>
+                    <span class="cta">Return</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="slide-footer">
+        <a class="btn ghost" href="solutions.html">◂ Back: Strategies</a>
+        <a class="btn primary" href="index.html">Return to overview</a>
+    </footer>
+    <div style="text-align: center; padding: 20px; color: rgba(230, 245, 255, 0.7); font-size: 0.9rem;">
+        <p>Made by <strong>Anshumaan Das</strong> - RA2411056010283 and <strong>Ankit Kumar</strong> - RA2411056010259</p>
+    </div>
+</body>
+</html>

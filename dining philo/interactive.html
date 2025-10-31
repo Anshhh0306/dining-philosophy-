@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 03 · Interactive Simulation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="slide-page">
+    <header class="slide-header">
+        <nav class="slide-nav">
+            <a class="brand-link" href="index.html">Dining Philosophers</a>
+            <div class="nav-links">
+                <a class="nav-btn" href="deadlock.html">◂ Prev</a>
+                <a class="nav-btn" href="solutions.html">Next ▸</a>
+            </div>
+        </nav>
+        <div class="slide-hero">
+            <p class="eyebrow">Interactive simulation</p>
+            <h1>State transitions and policy implementations</h1>
+            <p>Explore different scenarios using the storyline cards to observe how various synchronization policies prevent deadlock and ensure fairness.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="interactive-wrapper">
+            <div class="sticky-stage" aria-live="polite">
+                <div class="table-visual interactive" aria-label="Interactive dining table simulation">
+                    <div class="table-surface">
+                        <div class="philosopher sim" data-index="0" data-label="Aristotle"></div>
+                        <div class="philosopher sim" data-index="1" data-label="Hypatia"></div>
+                        <div class="philosopher sim" data-index="2" data-label="Confucius"></div>
+                        <div class="philosopher sim" data-index="3" data-label="Descartes"></div>
+                        <div class="philosopher sim" data-index="4" data-label="Ada"></div>
+                        <div class="fork sim" data-index="0"></div>
+                        <div class="fork sim" data-index="1"></div>
+                        <div class="fork sim" data-index="2"></div>
+                        <div class="fork sim" data-index="3"></div>
+                        <div class="fork sim" data-index="4"></div>
+                    </div>
+                </div>
+                
+                <aside class="state-legend">
+                    <h4>State legend</h4>
+                    <ul>
+                        <li><span class="dot thinking"></span>Thinking</li>
+                        <li><span class="dot hungry"></span>Hungry</li>
+                        <li><span class="dot eating"></span>Eating</li>
+                        <li><span class="dot blocked"></span>Blocked / waiting</li>
+                        <li><span class="dot satisfied"></span>Satiated &amp; releasing</li>
+                    </ul>
+                </aside>
+            </div>
+            
+            <div class="storyline">
+                <article class="story-step" data-scene="0">
+                    <span class="step-index">Phase 01</span>
+                    <h3>Calm contemplation</h3>
+                    <p>All philosophers are thinking peacefully. No forks are claimed, so shared resources are completely free.</p>
+                    <div class="step-glow" aria-hidden="true"></div>
+                </article>
+                <article class="story-step" data-scene="1">
+                    <span class="step-index">Phase 02</span>
+                    <h3>Requests ripple around</h3>
+                    <p>Multiple philosophers become hungry and reach for their left fork first. Contention begins to surface.</p>
+                    <div class="step-glow" aria-hidden="true"></div>
+                </article>
+                <article class="story-step" data-scene="2">
+                    <span class="step-index">Phase 03</span>
+                    <h3>Deadlock freeze</h3>
+                    <p>Everyone clutches one fork and waits for another. All resources are busy and nothing progresses.</p>
+                    <div class="step-glow" aria-hidden="true"></div>
+                </article>
+                <article class="story-step" data-scene="3">
+                    <span class="step-index">Phase 04</span>
+                    <h3>Ordered access policy</h3>
+                    <p>A strict ordering lets selected philosophers reach both forks, eat, and release. The circular wait breaks.</p>
+                    <div class="step-glow" aria-hidden="true"></div>
+                </article>
+                <article class="story-step" data-scene="4">
+                    <span class="step-index">Phase 05</span>
+                    <h3>Fair rotation resumes</h3>
+                    <p>Forks cycle smoothly with host or ordering strategies. Waiting philosophers eventually eat.</p>
+                    <div class="step-glow" aria-hidden="true"></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="slide-footer">
+        <a class="btn ghost" href="deadlock.html">◂ Back: Deadlock</a>
+        <a class="btn primary" href="solutions.html">Next: Prevention strategies</a>
+    </footer>
+    <div style="text-align: center; padding: 20px; color: rgba(230, 245, 255, 0.7); font-size: 0.9rem;">
+        <p>Made by <strong>Anshumaan Das</strong> - RA2411056010283 and <strong>Ankit Kumar</strong> - RA2411056010259</p>
+    </div>
+</body>
+</html>

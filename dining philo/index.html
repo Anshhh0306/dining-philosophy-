@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Philosophers | OS Synchronization Explained</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header class="hero" id="top">
+        <nav class="top-nav">
+            <span class="brand">Dining Philosophers</span>
+            <a href="interactive.html" class="nav-link">Jump to simulation</a>
+        </nav>
+        <div class="hero-glows" aria-hidden="true">
+            <div class="hero-glow glow-one"></div>
+            <div class="hero-glow glow-two"></div>
+            <div class="hero-glow glow-three"></div>
+        </div>
+        <div class="hero-parallax" aria-hidden="true">
+            <div class="parallax-layer orbit orbit-one" data-depth="0.03"></div>
+            <div class="parallax-layer orbit orbit-two" data-depth="0.05"></div>
+            <div class="parallax-layer orbit orbit-three" data-depth="0.08"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="eyebrow">Operating Systems · Concurrency</p>
+                <h1>The Dining Philosophers Problem</h1>
+                <p class="lead">An interactive visualization demonstrating resource allocation, deadlock scenarios, and synchronization strategies in concurrent systems.</p>
+                <div class="hero-actions">
+                    <a class="btn primary magnetic" href="setup.html">Explore the problem</a>
+                    <a class="btn ghost magnetic" href="solutions.html">View solutions</a>
+                </div>
+            </div>
+            <div class="table-visual hero-visual tilt-hover tilt-shadow" aria-hidden="true" data-parallax-target data-tilt-base-x="14" data-tilt-max-x="8" data-tilt-max-y="14" data-tilt-perspective="1100">
+                <div class="table-surface">
+                    <div class="philosopher" data-label="Aristotle"></div>
+                    <div class="philosopher" data-label="Hypatia"></div>
+                    <div class="philosopher" data-label="Confucius"></div>
+                    <div class="philosopher" data-label="Descartes"></div>
+                    <div class="philosopher" data-label="Ada"></div>
+                    <div class="fork"></div>
+                    <div class="fork"></div>
+                    <div class="fork"></div>
+                    <div class="fork"></div>
+                    <div class="fork"></div>
+                </div>
+                <div class="pulse-ring"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro" class="section reveal">
+            <div class="section-header">
+                <p class="eyebrow">Navigation</p>
+                <h2>Explore the components of the Dining Philosophers Problem</h2>
+                <p>Navigate through different aspects of the problem, from initial setup to advanced prevention strategies.</p>
+            </div>
+            <div class="slide-grid">
+                <a class="slide-card tilt-hover tilt-shadow magnetic" data-tilt-max-x="6" data-tilt-max-y="10" href="setup.html">
+                    <h3>01 · Problem setup</h3>
+                    <p>Understanding the philosophers, forks, and rules that model concurrent processes and shared resources.</p>
+                    <span class="cta">View details</span>
+                </a>
+                <a class="slide-card tilt-hover tilt-shadow magnetic" data-tilt-max-x="6" data-tilt-max-y="10" href="deadlock.html">
+                    <h3>02 · Deadlock analysis</h3>
+                    <p>Examining how circular wait conditions create system deadlock and satisfy Coffman conditions.</p>
+                    <span class="cta">View details</span>
+                </a>
+                <a class="slide-card tilt-hover tilt-shadow magnetic" data-tilt-max-x="6" data-tilt-max-y="10" href="interactive.html">
+                    <h3>03 · Interactive simulation</h3>
+                    <p>Dynamic visualization of philosopher state transitions: thinking, hungry, eating, blocked, and satisfied.</p>
+                    <span class="cta">View details</span>
+                </a>
+                <a class="slide-card tilt-hover tilt-shadow magnetic" data-tilt-max-x="6" data-tilt-max-y="10" href="solutions.html">
+                    <h3>04 · Prevention strategies</h3>
+                    <p>Analysis of resource ordering, arbitrator-based, and asymmetric solutions with implementation details.</p>
+                    <span class="cta">View details</span>
+                </a>
+                <a class="slide-card tilt-hover tilt-shadow magnetic" data-tilt-max-x="6" data-tilt-max-y="10" href="takeaways.html">
+                    <h3>05 · Summary</h3>
+                    <p>Key insights on deadlock prevention, fairness, and applications in modern operating systems.</p>
+                    <span class="cta">View details</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p>Ready for the demo?</p>
+            <a class="btn ghost" href="interactive.html">Open the simulation</a>
+        </div>
+        <p class="credit">Made by <strong>Anshumaan Das</strong> - RA2411056010283 and <strong>Ankit Kumar</strong> - RA2411056010259</p>
+    </footer>
+</body>
+</html>

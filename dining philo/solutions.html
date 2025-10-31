@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 04 · Prevention Strategies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="slide-page">
+    <header class="slide-header">
+        <nav class="slide-nav">
+            <a class="brand-link" href="index.html">Dining Philosophers</a>
+            <div class="nav-links">
+                <a class="nav-btn" href="interactive.html">◂ Prev</a>
+                <a class="nav-btn" href="takeaways.html">Next ▸</a>
+            </div>
+        </nav>
+        <div class="slide-hero">
+            <p class="eyebrow">Prevention strategies</p>
+            <h1>Synchronization policies for deadlock prevention</h1>
+            <p>Three classical approaches used in operating systems to ensure safe and fair resource allocation: hierarchy, arbitration, and asymmetric protocols.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="solution-cards">
+            <article class="solution-card">
+                <h3>Resource hierarchy</h3>
+                <p>Order the forks and always pick the lower-numbered fork first. Threads gain resources in a predetermined order so circular wait disappears.</p>
+                <p class="tag">Eliminates circular wait</p>
+            </article>
+            <article class="solution-card">
+                <h3>Arbitrator / host</h3>
+                <p>Introduce a coordinator who only seats four philosophers at a time. Limiting concurrent access breaks the hold-and-wait condition.</p>
+                <p class="tag">Removes hold-and-wait</p>
+            </article>
+            <article class="solution-card">
+                <h3>Asymmetric strategy</h3>
+                <p>Alternate fork pickup order by seat (left-right-left...). This tiny change prevents everyone from chasing the same resource simultaneously.</p>
+                <p class="tag">Breaks symmetry</p>
+            </article>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-header">
+                <p class="eyebrow">Implementation notes</p>
+                <h2>Mapping strategies to OS synchronization constructs</h2>
+                <p>Each prevention technique directly corresponds to fundamental operating system primitives used for resource management and synchronization.</p>
+            </div>
+            <div class="takeaways-grid">
+                <div class="takeaway">
+                    <h3>Hierarchy → lock ordering</h3>
+                    <p>Deadlocks vanish if every mutex is acquired in a global order. Many kernels enforce this for low-level locks.</p>
+                </div>
+                <div class="takeaway">
+                    <h3>Host → semaphore guard</h3>
+                    <p>Use a counting semaphore to cap how many threads can enter the critical region simultaneously.</p>
+                </div>
+                <div class="takeaway">
+                    <h3>Asymmetry → priority tweaks</h3>
+                    <p>Alternating lock acquisition order is a simple trick that fits well in teaching schedulers and fairness policies.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="slide-footer">
+        <a class="btn ghost" href="interactive.html">◂ Back: Interactive</a>
+        <a class="btn primary" href="takeaways.html">Next: Key takeaways</a>
+    </footer>
+    <div style="text-align: center; padding: 20px; color: rgba(230, 245, 255, 0.7); font-size: 0.9rem;">
+        <p>Made by <strong>Anshumaan Das</strong> - RA2411056010283 and <strong>Ankit Kumar</strong> - RA2411056010259</p>
+    </div>
+</body>
+</html>
