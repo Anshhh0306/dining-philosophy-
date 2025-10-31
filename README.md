@@ -103,10 +103,9 @@ This visualization helps students and developers understand:
 
 Requires a modern browser with ES6+ support and CSS Grid.
 
-## Authors
+## Author
 
-- **Anshumaan Das** - RA2411056010283
-- **Ankit Kumar** - RA2411056010259
+ **Anshumaan Das** 
 
 ## Course Information
 
