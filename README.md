@@ -34,8 +34,7 @@ dining-philosophers/
 ├── solutions.html         # Prevention strategies
 ├── takeaways.html         # Key insights and summary
 ├── styles.css             # All styling and animations
-├── app.js                 # Simulation logic
-└── DINING_PHILOSOPHERS_DOCUMENTATION.md  # Detailed documentation
+└── app.js                 # Simulation logic 
 ```
 
 ## Technologies Used
